@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <org.osmdroid.views.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/osmMap">
+    </org.osmdroid.views.MapView>
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:imeOptions="actionSend"
+        android:hint="Dirección: "
+        android:padding="16dp"
+        android:background="@drawable/rounded_corners"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:layout_gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/textoError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="28sp"
+        android:text=""
+        android:textColor="@color/red"
+        android:background="@color/black"
+        />
+
+</FrameLayout>
