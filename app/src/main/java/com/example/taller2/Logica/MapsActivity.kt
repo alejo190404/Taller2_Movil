@@ -46,7 +46,12 @@ import java.io.FileWriter
 import java.io.IOException
 import java.io.Writer
 import java.util.Date
+import kotlin.math.atan2
+import kotlin.math.cos
+import kotlin.math.pow
 import kotlin.math.roundToInt
+import kotlin.math.sin
+import kotlin.math.sqrt
 
 class MapsActivity : AppCompatActivity() {
     lateinit var binding: ActivityMapsBinding
@@ -308,6 +313,7 @@ class MapsActivity : AppCompatActivity() {
         sensorManager.unregisterListener(lightSensorListener)
     }
 
+    var previousLocation: GeoPoint = GeoPoint(0, 0)
     private fun startLocationUpdates() {
         if ((ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
             &&
@@ -374,6 +380,7 @@ class MapsActivity : AppCompatActivity() {
         val filename = "locations.json"
         try {
             val file = File(baseContext.getExternalFilesDir(null), filename)
+            Log.i("Ubicaciondelarchivo", "${file}")
             output = BufferedWriter(FileWriter(file))
             output.write(localizaciones.toString())
             output.close()
@@ -382,5 +389,7 @@ class MapsActivity : AppCompatActivity() {
 //Log error
         }
     }
+
+
 
 }
