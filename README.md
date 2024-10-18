@@ -4,4 +4,4 @@
  - Nicolas Ramírez
  - Alejandro Barragán
 
-**Link al video de YouTube:** [Video demostrativo]([www.google.com](https://youtu.be/jwkkdg8AU4Q))
+**Link al video de YouTube:** [Video demostrativo](https://youtu.be/jwkkdg8AU4Q)
